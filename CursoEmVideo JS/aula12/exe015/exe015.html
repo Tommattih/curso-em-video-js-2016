@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUEM SOU EU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Verificador de idade</h1>
+  </header>
+
+  <section>
+    <div id="">
+      <p>Ano de nascimento: 
+        <input type="number" name="txtano" id="txtano" min="0" >
+      </p>
+      <p>Genêro:
+        <input type="radio" name="radgen" id="masc">
+        <label for="masc">Masculino</label>
+        <input type="radio" name="radgen" id="fem">
+        <label for="fem">Feminino</label>
+        <input type="radio" name="radgen" id="oth" checked>
+        <label for="oth">Outro</label>
+      </p>
+      <p>
+        <input type="button" value="Verificar" onclick="check()" id="button">
+      </p>
+
+    </div>
+    <div id="res">
+      Preencha os dados acima para ver o resultado!
+      <img src="./0.png" alt="avatar to ages">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Exercício #15 do Mateus</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos DOM</title>
+  <style>
+    body {
+      background-color: #efe;
+      color: #9990;
+      font: normal 20pt arial;
+    }
+    div {
+      background-color: #127ba1d2;
+      color: #fff;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      line-height: 190px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<div id="area">interaja</div>
+<!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">interaja</div> versao basica poluida-->
+
+<script>
+  var area = document.getElementById('area')
+
+  //versão melhorada
+  area.addEventListener('click', clicar)
+  area.addEventListener('mouseenter', entrar)
+  area.addEventListener('mouseout', sair)
+
+  function clicar() {
+    area.innerText = 'Clicou!'
+    area.style.background = '#eea'
+    area.style.color = '#f85'
+    area.style.fontSize = '30pt'
+  }
+  function entrar() {
+    area.innerText = 'Entrou!'
+  }
+
+  function sair() {
+    area.innerText = 'Saiu!'
+    area.style.background = '#127ba1d2'
+    area.style.color = '#fff'
+    area.style.fontSize = '20pt'
+  }
+</script>
+</body>
+</html>

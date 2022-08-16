@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONSULADO BRASILEIRO</title>
+</head>
+<body>
+  <h1>Controle de Naturalidade</h1>
+  País de origem: <input type="text" id="pais" class="pais">
+  <input type="button" value="Verificar" onclick="enviar()">
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    function enviar() {
+      var origem = document.getElementById('pais')
+      // var pais = toString(origem.value) 
+      var resp = document.getElementById('resultado')
+      resp.innerHTML = `<p>Você nasceu em ${origem.value}, portanto,</p>`
+
+      if (origem.value != 'brasil' ){      
+        resp.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong>!</p>`
+      } else {
+        resp.innerHTML += `<p>Você é <strong>BRASILEIRO</strong>!</p>`
+      }
+    }
+  </script>
+</body>
+</html>
